@@ -1,5 +1,7 @@
 <?php
  header("Access-Control-Allow-Origin: *");
+ //header("Content-type: application/json");
+ error_reporting(0);
 
 $superheroes = [
   [
@@ -64,6 +66,19 @@ $superheroes = [
   ], 
 ];
 
+// Getting and sanitizing request from client
+
+ $query = filter_var($_REQUEST["query"], FILTER_SANITIZE_STRING, FILTER_FLAG_NO_ENCODE_QUOTES);
+
+// Searching for superhero
+ foreach ($superheroes as $superhero){
+    if($superhero['name'] == $query || $superhero['alias'] == $query){
+        echo json_encode($superhero, JSON_PRETTY_PRINT);
+    }
+}
+
+
+
 ?>
 
 <ul>
@@ -71,3 +86,6 @@ $superheroes = [
   <li><?= $superhero['alias']; ?></li>
 <?php endforeach; ?>
 </ul>
+
+
+

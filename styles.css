@@ -1,0 +1,51 @@
+html{
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+header{
+    display: flex;
+    -ms-flex-align: center;
+    height: 120px;
+    background-color: #4d8ab5;
+    padding-left: 20%;
+    color: white;
+    text-transform: uppercase;
+    align-content: center;
+    font-size: 25px;
+}
+
+body{
+    background-color: #DCE0DD;
+}
+
+.container{
+    margin-left: 200px;
+    margin-right: 200px;
+}
+form{
+    display:flex;
+    flex-direction:
+}
+form > *{
+    height: 35px;
+}
+input{
+    width: 800px;
+    border-radius: 5px;
+}
+
+button{
+    background-color: #BF281D;
+    color: white;
+    border-radius: 5px;
+}
+
+.notFound{
+    color: #BF281D;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.found{
+    font-weight: bold;
+    text-transform: uppercase;
+}
